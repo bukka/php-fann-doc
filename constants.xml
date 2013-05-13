@@ -5,7 +5,8 @@
  &reftitle.constants;
  &extension.constants;
  <para>
-  <variablelist>
+  <variablelist xml:id="constants.fann-train">
+   <title>Training algorithms</title>
    <varlistentry xml:id="constant.fann-train-incremental">
     <term>
      <constant>FANN_TRAIN_INCREMENTAL</constant>
@@ -13,6 +14,9 @@
     </term>
     <listitem>
      <simpara>
+      Standard backpropagation algorithm, where the weights are updated after each training pattern.
+      This means that the weights are updated many times during a single epoch. For this reason some problems,
+      will train very fast with this algorithm, while other more advanced problems will not train very well.
      </simpara>
     </listitem>
    </varlistentry>
@@ -23,6 +27,11 @@
     </term>
     <listitem>
      <simpara>
+      Standard backpropagation algorithm, where the weights are updated after calculating the mean square error
+      for the whole training set. This means that the weights are only updated once during a epoch.
+      For this reason some problems, will train slower with this algorithm. But since the mean square
+      error is calculated more correctly than in incremental training, some problems will reach a better
+      solutions with this algorithm.
      </simpara>
     </listitem>
    </varlistentry>
@@ -33,6 +42,13 @@
     </term>
     <listitem>
      <simpara>
+      A more advanced batch training algorithm which achieves good results for many problems. The RPROP
+      training algorithm is adaptive, and does therefore not use the learning_rate. Some other parameters
+      can however be set to change the way the RPROP algorithm works, but it is only recommended
+      for users with insight in how the RPROP training algorithm works. The RPROP training algorithm
+      is described by [Riedmiller and Braun, 1993], but the actual learning algorithm used here is
+      the iRPROP- training algorithm which is described by [Igel and Husken, 2000] which is an variety
+      of the standard RPROP training algorithm.
      </simpara>
     </listitem>
    </varlistentry>
@@ -43,6 +59,10 @@
     </term>
     <listitem>
      <simpara>
+      A more advanced batch training algorithm which achieves good results for many problems.
+      The quickprop training algorithm uses the learning_rate parameter along with other more advanced parameters,
+      but it is only recommended to change these advanced parameters, for users with insight in how the quickprop
+      training algorithm works. The quickprop training algorithm is described by [Fahlman, 1988].
      </simpara>
     </listitem>
    </varlistentry>
@@ -53,9 +73,13 @@
     </term>
     <listitem>
      <simpara>
+      Even more advance training algorithm. Only for version 2.2
      </simpara>
     </listitem>
    </varlistentry>
+  </variablelist>
+  <variablelist xml:id="constants.fann-activation-funcs">
+   <title>Activation functions</title>
    <varlistentry xml:id="constant.fann-linear">
     <term>
      <constant>FANN_LINEAR</constant>
@@ -63,6 +87,7 @@
     </term>
     <listitem>
      <simpara>
+      Linear activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -73,6 +98,7 @@
     </term>
     <listitem>
      <simpara>
+      Threshold activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -83,6 +109,7 @@
     </term>
     <listitem>
      <simpara>
+      Threshold activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -93,6 +120,7 @@
     </term>
     <listitem>
      <simpara>
+      Sigmoid activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -103,6 +131,7 @@
     </term>
     <listitem>
      <simpara>
+      Stepwise linear approximation to sigmoid.
      </simpara>
     </listitem>
    </varlistentry>
@@ -113,6 +142,7 @@
     </term>
     <listitem>
      <simpara>
+      Symmetric sigmoid activation function, aka. tanh.
      </simpara>
     </listitem>
    </varlistentry>
@@ -123,6 +153,7 @@
     </term>
     <listitem>
      <simpara>
+      Stepwise linear approximation to symmetric sigmoid
      </simpara>
     </listitem>
    </varlistentry>
@@ -133,6 +164,7 @@
     </term>
     <listitem>
      <simpara>
+      Gaussian activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -143,6 +175,7 @@
     </term>
     <listitem>
      <simpara>
+      Symmetric gaussian activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -153,6 +186,7 @@
     </term>
     <listitem>
      <simpara>
+      Stepwise gaussian activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -163,6 +197,7 @@
     </term>
     <listitem>
      <simpara>
+      Fast (sigmoid like) activation function defined by David Elliott.
      </simpara>
     </listitem>
    </varlistentry>
@@ -173,6 +208,7 @@
     </term>
     <listitem>
      <simpara>
+      Fast (symmetric sigmoid like) activation function defined by David Elliott.
      </simpara>
     </listitem>
    </varlistentry>
@@ -183,6 +219,7 @@
     </term>
     <listitem>
      <simpara>
+      Bounded linear activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -193,6 +230,7 @@
     </term>
     <listitem>
      <simpara>
+      Bounded linear activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -203,6 +241,7 @@
     </term>
     <listitem>
      <simpara>
+      Periodical sinus activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -213,6 +252,7 @@
     </term>
     <listitem>
      <simpara>
+      Periodical cosinus activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -223,6 +263,7 @@
     </term>
     <listitem>
      <simpara>
+      Periodical sinus activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -233,9 +274,13 @@
     </term>
     <listitem>
      <simpara>
+      Periodical cosinus activation function.
      </simpara>
     </listitem>
    </varlistentry>
+  </variablelist>
+  <variablelist xml:id="constants.fann-errorfunc">
+   <title>Error function used during training</title>
    <varlistentry xml:id="constant.fann-errorfunc-linear">
     <term>
      <constant>FANN_ERRORFUNC_LINEAR</constant>
@@ -243,6 +288,7 @@
     </term>
     <listitem>
      <simpara>
+      Standard linear error function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -253,9 +299,15 @@
     </term>
     <listitem>
      <simpara>
+      Tanh error function, usually better but can require a lower learning rate. This error function agressively
+      targets outputs that differ much from the desired, while not targetting outputs that only differ a little that much.
+      This activation function is not recommended for cascade training and incremental training.
      </simpara>
     </listitem>
    </varlistentry>
+  </variablelist>
+  <variablelist xml:id="constants.fann-stopfunc">
+   <title>Stop criteria used during training</title>
    <varlistentry xml:id="constant.fann-stopfunc-mse">
     <term>
      <constant>FANN_STOPFUNC_MSE</constant>
@@ -263,6 +315,7 @@
     </term>
     <listitem>
      <simpara>
+      Stop criteria is Mean Square Error (MSE) value.
      </simpara>
     </listitem>
    </varlistentry>
@@ -273,9 +326,15 @@
     </term>
     <listitem>
      <simpara>
+      Stop criteria is number of bits that fail.  The number of bits means the number of output neurons
+      which differs more than the bit fail limit (see fann_get_bit_fail_limit, fann_set_bit_fail_limit). The bits are counted
+      in all of the training data, so this number can be higher than the number of training data.
      </simpara>
     </listitem>
    </varlistentry>
+  </variablelist>
+  <variablelist xml:id="constants.fann-nettype">
+   <title>Definition of network types used by fann_get_network_type</title>
    <varlistentry xml:id="constant.fann-nettype-layer">
     <term>
      <constant>FANN_NETTYPE_LAYER</constant>
@@ -283,6 +342,7 @@
     </term>
     <listitem>
      <simpara>
+      Each layer only has connections to the next layer.
      </simpara>
     </listitem>
    </varlistentry>
@@ -293,9 +353,13 @@
     </term>
     <listitem>
      <simpara>
+      Each layer has connections to all following layers
      </simpara>
     </listitem>
    </varlistentry>
+   </variablelist>
+  <variablelist xml:id="constants.fann-e">
+   <title>Errors</title>
    <varlistentry xml:id="constant.fann-e-no-error">
     <term>
      <constant>FANN_E_NO_ERROR</constant>
@@ -303,6 +367,7 @@
     </term>
     <listitem>
      <simpara>
+      No error.
      </simpara>
     </listitem>
    </varlistentry>
@@ -313,6 +378,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to open configuration file for reading.
      </simpara>
     </listitem>
    </varlistentry>
@@ -323,6 +389,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to open configuration file for writing.
      </simpara>
     </listitem>
    </varlistentry>
@@ -333,6 +400,7 @@
     </term>
     <listitem>
      <simpara>
+      Wrong version of configuration file.
      </simpara>
     </listitem>
    </varlistentry>
@@ -343,6 +411,7 @@
     </term>
     <listitem>
      <simpara>
+      Error reading info from configuration file.
      </simpara>
     </listitem>
    </varlistentry>
@@ -353,6 +422,7 @@
     </term>
     <listitem>
      <simpara>
+      Error reading neuron info from configuration file.
      </simpara>
     </listitem>
    </varlistentry>
@@ -363,6 +433,7 @@
     </term>
     <listitem>
      <simpara>
+      Error reading connections from configuration file.
      </simpara>
     </listitem>
    </varlistentry>
@@ -373,6 +444,7 @@
     </term>
     <listitem>
      <simpara>
+      Number of connections not equal to the number expected.
      </simpara>
     </listitem>
    </varlistentry>
@@ -383,6 +455,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to open train data file for writing.
      </simpara>
     </listitem>
    </varlistentry>
@@ -393,6 +466,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to open train data file for reading.
      </simpara>
     </listitem>
    </varlistentry>
@@ -403,6 +477,7 @@
     </term>
     <listitem>
      <simpara>
+      Error reading training data from file.
      </simpara>
     </listitem>
    </varlistentry>
@@ -413,6 +488,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to allocate memory.
      </simpara>
     </listitem>
    </varlistentry>
@@ -423,6 +499,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to train with the selected activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -433,6 +510,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to use the selected activation function.
      </simpara>
     </listitem>
    </varlistentry>
@@ -443,6 +521,7 @@
     </term>
     <listitem>
      <simpara>
+      Irreconcilable differences between two struct fann_train_data structures.
      </simpara>
     </listitem>
    </varlistentry>
@@ -453,6 +532,7 @@
     </term>
     <listitem>
      <simpara>
+      Unable to use the selected training algorithm.
      </simpara>
     </listitem>
    </varlistentry>
@@ -463,6 +543,7 @@
     </term>
     <listitem>
      <simpara>
+      Trying to take subset which is not within the training set.
      </simpara>
     </listitem>
    </varlistentry>
@@ -473,6 +554,7 @@
     </term>
     <listitem>
      <simpara>
+      Index is out of bound.
      </simpara>
     </listitem>
    </varlistentry>
@@ -483,6 +565,7 @@
     </term>
     <listitem>
      <simpara>
+      Scaling parameters not present.
      </simpara>
     </listitem>
    </varlistentry>
@@ -493,6 +576,7 @@
     </term>
     <listitem>
      <simpara>
+      The number of input neurons in the ann data do not match
      </simpara>
     </listitem>
    </varlistentry>
@@ -503,6 +587,7 @@
     </term>
     <listitem>
      <simpara>
+      The number of output neurons in the ann and data do not match.
      </simpara>
     </listitem>
    </varlistentry>
