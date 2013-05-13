@@ -7,10 +7,10 @@
  <section xml:id="fann.requirements">
   &reftitle.required;
   <para>
-
+   PHP &gt;= 5.1.3 and libfann &gt;= 2.1.0
   </para>
  </section>
-
+ 
  <section xml:id="fann.installation">
   &reftitle.install;
   &no.install;
