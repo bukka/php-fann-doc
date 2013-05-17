@@ -4,24 +4,25 @@
 <refentry xml:id="function.fann-create-shortcut" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_create_shortcut</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Creates a standard backpropagation neural network which is not fully connectected and has shortcut connections</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_create_shortcut</methodname>
-   <methodparam><type>string</type><parameter>num_layers</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_neurons1</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_neurons2</parameter></methodparam>
-   <methodparam choice="opt"><type>string</type><parameter>...</parameter></methodparam>
+   <type>reference</type><methodname>fann_create_shortcut</methodname>
+   <methodparam><type>int</type><parameter>num_layers</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_neurons1</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_neurons2</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Creates a standard backpropagation neural network, which is not fully connected and which also has shortcut connections.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   Shortcut connections are connections that skip layers. A fully connected network with shortcut connections, is a network
+   where all neurons are connected to all neurons in later layers. Including direct connections from the input layer to the output layer.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -31,7 +32,7 @@
     <term><parameter>num_layers</parameter></term>
     <listitem>
      <para>
-      
+      The total number of layers including the input and the output layer.
      </para>
     </listitem>
    </varlistentry>
@@ -39,7 +40,7 @@
     <term><parameter>num_neurons1</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in the first layer.
      </para>
     </listitem>
    </varlistentry>
@@ -47,7 +48,7 @@
     <term><parameter>num_neurons2</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in the second layer.
      </para>
     </listitem>
    </varlistentry>
@@ -55,7 +56,7 @@
     <term><parameter>...</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in other layers.      
      </para>
     </listitem>
    </varlistentry>
@@ -65,10 +66,20 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Returns a neural network resource on success, or &false; on error.
   </para>
  </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_create_shortcut_array</function></member>
+    <member><function>fann_create_sparse</function></member>
+    <member><function>fann_create_standard</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
 
 </refentry>
 

@@ -4,25 +4,22 @@
 <refentry xml:id="function.fann-create-sparse" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_create_sparse</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Creates a standard backpropagation neural network, which is not fully connected</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
    <type>ReturnType</type><methodname>fann_create_sparse</methodname>
-   <methodparam><type>string</type><parameter>connection_rate</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_layers</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_neurons1</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_neurons2</parameter></methodparam>
-   <methodparam choice="opt"><type>string</type><parameter>...</parameter></methodparam>
+   <methodparam><type>float</type><parameter>connection_rate</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_layers</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_neurons1</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_neurons2</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Creates a standard backpropagation neural network, which is not fully connected.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -32,7 +29,9 @@
     <term><parameter>connection_rate</parameter></term>
     <listitem>
      <para>
-      
+      The connection rate controls how many connections there will be in the network. If the connection rate
+      is set to 1, the network will be fully connected, but if it is set to 0.5 only half of the connections
+      will be set. A connection rate of 1 will yield the same result as <function>fann_create_standard</function>.
      </para>
     </listitem>
    </varlistentry>
@@ -40,7 +39,7 @@
     <term><parameter>num_layers</parameter></term>
     <listitem>
      <para>
-      
+      The total number of layers including the input and the output layer.
      </para>
     </listitem>
    </varlistentry>
@@ -48,7 +47,7 @@
     <term><parameter>num_neurons1</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in the first layer.
      </para>
     </listitem>
    </varlistentry>
@@ -56,7 +55,7 @@
     <term><parameter>num_neurons2</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in the second layer.
      </para>
     </listitem>
    </varlistentry>
@@ -64,7 +63,7 @@
     <term><parameter>...</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in other layers.
      </para>
     </listitem>
    </varlistentry>
@@ -74,10 +73,21 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Returns a neural network resource on success, or &false; on error.
   </para>
  </refsect1>
 
+ 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_create_sparse_array</function></member>
+    <member><function>fann_create_standard</function></member>
+    <member><function>fann_create_shortcut</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
 
 </refentry>
 

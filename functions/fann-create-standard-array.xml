@@ -4,22 +4,27 @@
 <refentry xml:id="function.fann-create-standard-array" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_create_standard_array</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Creates a standard fully connected backpropagation neural network using an array of layer sizes</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_create_standard_array</methodname>
-   <methodparam><type>string</type><parameter>num_layers</parameter></methodparam>
-   <methodparam><type>string</type><parameter>layers</parameter></methodparam>
+   <type>resource</type><methodname>fann_create_standard_array</methodname>
+   <methodparam><type>int</type><parameter>num_layers</parameter></methodparam>
+   <methodparam><type>array</type><parameter>layers</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Creates a standard fully connected backpropagation neural network.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   There will be a bias neuron in each layer (except the output layer),
+   and this bias neuron will be connected to all neurons in the next layer.
+   When running the network, the bias nodes always emits 1.
+  </para>
+  <para>
+   To destroy a neural network use the <function>fann_destroy</function> function.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -29,7 +34,7 @@
     <term><parameter>num_layers</parameter></term>
     <listitem>
      <para>
-      
+      The total number of layers including the input and the output layer.
      </para>
     </listitem>
    </varlistentry>
@@ -37,7 +42,7 @@
     <term><parameter>layers</parameter></term>
     <listitem>
      <para>
-      
+      An array of layer sizes.
      </para>
     </listitem>
    </varlistentry>
@@ -47,10 +52,20 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Returns a neural network resource on success, or &false; on error.
   </para>
  </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_create_standard</function></member>
+    <member><function>fann_create_sparse</function></member>
+    <member><function>fann_create_shortcut</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
 
 </refentry>
 

@@ -4,21 +4,18 @@
 <refentry xml:id="function.fann-destroy" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_destroy</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Destroys the entire network and properly freeing all the associated memory</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_destroy</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
+   <type>bool</type><methodname>fann_destroy</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Destroys the entire network and properly freeing all the associated memory.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +24,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -37,9 +32,7 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
-
-  </para>
+  &fann.return.bool;
  </refsect1>
 
 

@@ -4,22 +4,20 @@
 <refentry xml:id="function.fann-run" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_run</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Will run input through the neural network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_run</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>input</parameter></methodparam>
+   <type>array</type><methodname>fann_run</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
+   <methodparam><type>array</type><parameter>input</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Will run input through the neural network, returning an array of outputs, the number of which being equal
+   to the number of neurons in the output layer.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -28,16 +26,14 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
    <varlistentry>
     <term><parameter>input</parameter></term>
     <listitem>
      <para>
-      
+      Array of input values
      </para>
     </listitem>
    </varlistentry>
@@ -47,10 +43,9 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Array of output values, or &false; on error
   </para>
  </refsect1>
-
 
 </refentry>
 

@@ -10,17 +10,17 @@
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_randomize_weights</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>min_weight</parameter></methodparam>
-   <methodparam><type>string</type><parameter>max_weight</parameter></methodparam>
+   <type>bool</type><methodname>fann_randomize_weights</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
+   <methodparam><type>float</type><parameter>min_weight</parameter></methodparam>
+   <methodparam><type>float</type><parameter>max_weight</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Give each connection a random weight between <parameter>min_weight</parameter> and <parameter>max_weight</parameter>
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   From the beginning the weights are random between -0.1 and 0.1.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -29,16 +29,14 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
    <varlistentry>
     <term><parameter>min_weight</parameter></term>
     <listitem>
      <para>
-      
+      Minimum weight value
      </para>
     </listitem>
    </varlistentry>
@@ -46,7 +44,7 @@
     <term><parameter>max_weight</parameter></term>
     <listitem>
      <para>
-      
+      Maximum weight value
      </para>
     </listitem>
    </varlistentry>
@@ -55,8 +53,15 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
+  &fann.return.bool;
+ </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_init_weights</function></member>
+   </simplelist>
   </para>
  </refsect1>
 

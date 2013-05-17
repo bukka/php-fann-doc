@@ -4,24 +4,29 @@
 <refentry xml:id="function.fann-create-standard" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_create_standard</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Creates a standard fully connected backpropagation neural network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_create_standard</methodname>
-   <methodparam><type>string</type><parameter>num_layers</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_neurons1</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_neurons2</parameter></methodparam>
-   <methodparam choice="opt"><type>string</type><parameter>...</parameter></methodparam>
+   <type>resource</type><methodname>fann_create_standard</methodname>
+   <methodparam><type>int</type><parameter>num_layers</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_neurons1</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_neurons2</parameter></methodparam>
+   <methodparam choice="opt"><type>int</type><parameter>...</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Creates a standard fully connected backpropagation neural network.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   There will be a bias neuron in each layer (except the output layer),
+   and this bias neuron will be connected to all neurons in the next layer.
+   When running the network, the bias nodes always emits 1.
+  </para>
+  <para>
+   To destroy a neural network use the <function>fann_destroy</function> function.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -31,7 +36,7 @@
     <term><parameter>num_layers</parameter></term>
     <listitem>
      <para>
-      
+      The total number of layers including the input and the output layer.
      </para>
     </listitem>
    </varlistentry>
@@ -39,7 +44,7 @@
     <term><parameter>num_neurons1</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in the first layer.
      </para>
     </listitem>
    </varlistentry>
@@ -47,7 +52,7 @@
     <term><parameter>num_neurons2</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in the second layer.
      </para>
     </listitem>
    </varlistentry>
@@ -55,7 +60,7 @@
     <term><parameter>...</parameter></term>
     <listitem>
      <para>
-      
+      Number of neurons in other layers.
      </para>
     </listitem>
    </varlistentry>
@@ -65,10 +70,20 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Returns a neural network resource on success, or &false; on error.
   </para>
  </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_create_standard_array</function></member>
+    <member><function>fann_create_sparse</function></member>
+    <member><function>fann_create_shortcut</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
 
 </refentry>
 
