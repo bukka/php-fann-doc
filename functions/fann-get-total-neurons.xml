@@ -4,21 +4,19 @@
 <refentry xml:id="function.fann-get-total-neurons" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_total_neurons</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Get the total number of neurons in the entire network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_total_neurons</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
+   <type>int</type><methodname>fann_get_total_neurons</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Get the total number of neurons in the entire network. This number does also include the bias neurons,
+   so a 2-4-2 network has 2+4+2 +2(bias) = 10 neurons.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +25,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -38,10 +34,9 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Total number of neurons in the entire network, or &false; on error.
   </para>
  </refsect1>
-
 
 </refentry>
 

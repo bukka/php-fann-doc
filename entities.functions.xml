@@ -130,6 +130,7 @@
 &reference.fann.functions.fann-set-train-stop-function;
 &reference.fann.functions.fann-set-training-algorithm;
 &reference.fann.functions.fann-set-weight-array;
+&reference.fann.functions.fann-set-weight;
 &reference.fann.functions.fann-shuffle-train-data;
 &reference.fann.functions.fann-subset-train-data;
 &reference.fann.functions.fann-test-data;

@@ -4,21 +4,18 @@
 <refentry xml:id="function.fann-get-num-output" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_num_output</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Get the number of output neurons</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_num_output</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
+   <type>int</type><methodname>fann_get_num_output</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Get the number of output neurons.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +24,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -38,7 +33,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   Number of output neurons, or &false; on error
   </para>
  </refsect1>
 

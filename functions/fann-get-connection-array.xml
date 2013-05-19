@@ -4,21 +4,18 @@
 <refentry xml:id="function.fann-get-connection-array" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_connection_array</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Get connections in the network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_connection_array</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
+   <type>array</type><methodname>fann_get_connection_array</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Get connections in the network.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +24,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -38,7 +33,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   An array of connections in the network
   </para>
  </refsect1>
 

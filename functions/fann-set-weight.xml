@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- $Revision$ -->
 
-<refentry xml:id="function.fann-set-weight-array" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
+<refentry xml:id="function.fann-set-weight" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
-  <refname>fann_set_weight_array</refname>
-  <refpurpose>Set connections in the network</refpurpose>
+  <refname>fann_set_weight</refname>
+  <refpurpose>Set a connection in the network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>bool</type><methodname>fann_set_weight_array</methodname>
+   <type>bool</type><methodname>fann_set_weight</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>array</type><parameter>connections</parameter></methodparam>
+   <methodparam><type>int</type><parameter>from_neuron</parameter></methodparam>
+   <methodparam><type>int</type><parameter>to_neuron</parameter></methodparam>
+   <methodparam><type>float</type><parameter>weight</parameter></methodparam>
   </methodsynopsis>
   <para>
-   Set connections in the network.
-  </para>
-  <para>
-   Only the weights can be changed, connections and weights are ignored if they do not already exist in the network.
+   Set a connections in the network.
   </para>
  </refsect1>
 
@@ -32,10 +31,26 @@
     </listitem>
    </varlistentry>
    <varlistentry>
-    <term><parameter>connections</parameter></term>
+    <term><parameter>from_neuron</parameter></term>
     <listitem>
      <para>
-      An array of <classname>FANNConnection</classname> objects
+      The neuron where the connection starts
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term><parameter>to_neuron</parameter></term>
+    <listitem>
+     <para>
+      The neuron where the connection ends
+     </para>
+    </listitem>
+   </varlistentry>
+   <varlistentry>
+    <term><parameter>weight</parameter></term>
+    <listitem>
+     <para>
+      Connection weight
      </para>
     </listitem>
    </varlistentry>

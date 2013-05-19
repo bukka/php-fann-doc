@@ -334,7 +334,7 @@
    </varlistentry>
   </variablelist>
   <variablelist xml:id="constants.fann-nettype">
-   <title>Definition of network types used by fann_get_network_type</title>
+   <title>Definition of network types used by <function>fann_get_network_type</function></title>
    <varlistentry xml:id="constant.fann-nettype-layer">
     <term>
      <constant>FANN_NETTYPE_LAYER</constant>
