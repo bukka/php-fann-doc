@@ -4,7 +4,7 @@
 <refentry xml:id="function.fann-reset-mse" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_reset_MSE</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Resets the mean square error from the network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
@@ -14,11 +14,11 @@
    <methodparam><type>string</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Resets the mean square error from the network.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   This function also resets the number of bits that fail.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +27,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+      &fann.ann.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -37,11 +35,19 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
-
-  </para>
+  &fann.return.bool;
  </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_get_MSE</function></member>
+    <member><function>fann_get_bit_fail</function></member>
+    <member><function>fann_get_bit_fail_limit</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
 
 </refentry>
 

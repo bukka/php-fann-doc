@@ -4,21 +4,22 @@
 <refentry xml:id="function.fann-get-mse" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_MSE</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Reads the mean square error from the network</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_MSE</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
+   <type>float</type><methodname>fann_get_MSE</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Reads the mean square error from the network.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   Reads the mean square error from the network. This value is calculated during training or testing and can therefore
+   sometimes be a bit off if the weights have been changed since the last calculation of the value.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +28,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -38,10 +37,18 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   The mean square error, or &false; on error.
   </para>
  </refsect1>
-
+ 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function>fann_test_data</function></member>
+   </simplelist>
+  </para>
+ </refsect1>
 
 </refentry>
 

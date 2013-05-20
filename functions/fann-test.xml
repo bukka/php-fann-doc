@@ -4,23 +4,21 @@
 <refentry xml:id="function.fann-test" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_test</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Test with a set of inputs, and a set of desired outputs</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_test</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>input</parameter></methodparam>
-   <methodparam><type>string</type><parameter>desired_output</parameter></methodparam>
+   <type>bool</type><methodname>fann_test</methodname>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
+   <methodparam><type>array</type><parameter>input</parameter></methodparam>
+   <methodparam><type>array</type><parameter>desired_output</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Test with a set of inputs, and a set of desired outputs. This operation updates the mean square error,
+   but does not change the network in any way.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -29,16 +27,14 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
    <varlistentry>
     <term><parameter>input</parameter></term>
     <listitem>
      <para>
-      
+      An array of inputs. This array must be exactly <function>fann_get_num_input</function> long.
      </para>
     </listitem>
    </varlistentry>
@@ -46,7 +42,7 @@
     <term><parameter>desired_output</parameter></term>
     <listitem>
      <para>
-      
+      An array of desired outputs. This array must be exactly <function>fann_get_num_output</function> long.
      </para>
     </listitem>
    </varlistentry>
@@ -55,8 +51,18 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
+  &fann.return.bool;
+ </refsect1>
+ 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
   <para>
-
+   <simplelist>
+    <member><function>fann_test_data</function></member>
+    <member><function>fann_train</function></member>
+    <member><function>fann_get_num_input</function></member>
+    <member><function>fann_get_num_output</function></member>
+   </simplelist>
   </para>
  </refsect1>
 
