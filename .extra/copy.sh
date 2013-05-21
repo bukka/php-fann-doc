@@ -6,5 +6,5 @@ else
 fi
 DOC="$( dirname "$( dirname "$( dirname $FANN )" )" )"
 
-cp $DOC/doc-base/manual.xml.in $FANN/extra
-cp $DOC/en/language-snippets.ent $FANN/extra
+cp $DOC/doc-base/manual.xml.in $FANN/.extra
+cp $DOC/en/language-snippets.ent $FANN/.extra
