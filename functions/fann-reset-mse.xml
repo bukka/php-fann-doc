@@ -10,7 +10,7 @@
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_reset_MSE</methodname>
+   <type>bool</type><methodname>fann_reset_MSE</methodname>
    <methodparam><type>string</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
