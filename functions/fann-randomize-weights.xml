@@ -4,7 +4,7 @@
 <refentry xml:id="function.fann-randomize-weights" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_randomize_weights</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose>Give each connection a random weight between min_weight and max_weight</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
