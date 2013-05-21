@@ -4,14 +4,14 @@
 <refentry xml:id="function.fann-train-on-file" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_train_on_file</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose></refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
    <type>ReturnType</type><methodname>fann_train_on_file</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
+   <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
    <methodparam><type>string</type><parameter>filename</parameter></methodparam>
    <methodparam><type>string</type><parameter>max_epochs</parameter></methodparam>
    <methodparam><type>string</type><parameter>epochs_between_reports</parameter></methodparam>
@@ -31,9 +31,7 @@
    <varlistentry>
     <term><parameter>ann</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.ann.description;
     </listitem>
    </varlistentry>
    <varlistentry>
@@ -73,8 +71,18 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
+  &fann.return.bool;
   <para>
+    , or &false; on error.
+  </para>
+ </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function></function></member>
+   </simplelist>
   </para>
  </refsect1>
 

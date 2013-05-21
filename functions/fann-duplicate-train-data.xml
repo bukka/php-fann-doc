@@ -4,14 +4,14 @@
 <refentry xml:id="function.fann-duplicate-train-data" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_duplicate_train_data</refname>
-  <refpurpose>Description</refpurpose>
+  <refpurpose></refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
    <type>ReturnType</type><methodname>fann_duplicate_train_data</methodname>
-   <methodparam><type>string</type><parameter>data</parameter></methodparam>
+   <methodparam><type>resource</type><parameter>data</parameter></methodparam>
   </methodsynopsis>
   <para>
 
@@ -27,9 +27,7 @@
    <varlistentry>
     <term><parameter>data</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.train.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -37,8 +35,18 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
+  &fann.return.bool;
   <para>
+    , or &false; on error.
+  </para>
+ </refsect1>
 
+ <refsect1 role="seealso">
+  &reftitle.seealso;
+  <para>
+   <simplelist>
+    <member><function></function></member>
+   </simplelist>
   </para>
  </refsect1>
 
