@@ -4,25 +4,26 @@
 <refentry xml:id="function.fann-train-on-data" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_train_on_data</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Trains on an entire dataset for a period of time</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_train_on_data</methodname>
+   <type>bool</type><methodname>fann_train_on_data</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
    <methodparam><type>resource</type><parameter>data</parameter></methodparam>
-   <methodparam><type>string</type><parameter>max_epochs</parameter></methodparam>
-   <methodparam><type>string</type><parameter>epochs_between_reports</parameter></methodparam>
-   <methodparam><type>string</type><parameter>desired_error</parameter></methodparam>
+   <methodparam><type>int</type><parameter>max_epochs</parameter></methodparam>
+   <methodparam><type>int</type><parameter>epochs_between_reports</parameter></methodparam>
+   <methodparam><type>float</type><parameter>desired_error</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Trains on an entire dataset for a period of time.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   This training uses the training algorithm chosen by <function>fann_set_training_algorithm</function> and
+   the parameters set for these training algorithms.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -44,7 +45,7 @@
     <term><parameter>max_epochs</parameter></term>
     <listitem>
      <para>
-      
+      The maximum number of epochs the training should continue
      </para>
     </listitem>
    </varlistentry>
@@ -52,7 +53,7 @@
     <term><parameter>epochs_between_reports</parameter></term>
     <listitem>
      <para>
-      
+      The number of epochs between calling a user function. A value of zero means that user function is not called.
      </para>
     </listitem>
    </varlistentry>
@@ -60,7 +61,8 @@
     <term><parameter>desired_error</parameter></term>
     <listitem>
      <para>
-      
+      The desired <function>fann_get_MSE</function> or <function>fann_get_bit_fail</function>, depending on the stop function
+      chosen by <function>fann_set_train_stop_function</function>
      </para>
     </listitem>
    </varlistentry>
@@ -70,16 +72,19 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_train_on_file</function></member>
+    <member><function>fann_train_epoch</function></member>
+    <member><function>fann_get_bit_fail</function></member>
+    <member><function>fann_get_MSE</function></member>
+    <member><function>fann_set_train_stop_function</function></member>
+    <member><function>fann_set_training_algorithm</function></member>
+    <member><function>fann_set_callback</function></member>
    </simplelist>
   </para>
  </refsect1>
