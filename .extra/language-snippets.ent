@@ -1387,6 +1387,8 @@ The XMLWriter <type>resource</type> that is being modified. This resource comes 
 <!ENTITY fann.ann.description '<para xmlns="http://docbook.org/ns/docbook">Neural network <type>resource</type>.</para>'>
 <!ENTITY fann.train.description '<para xmlns="http://docbook.org/ns/docbook">Neural network training data <type>resource</type>.</para>'>
 <!ENTITY fann.return.bool '<para xmlns="http://docbook.org/ns/docbook">Returns &true; on success, or &false; otherwise.</para>'>
+<!ENTITY fann.return.ann '<para xmlns="http://docbook.org/ns/docbook"> Returns a neural network <type>resource</type> on success, or &false; on error.</para>'>
+<!ENTITY fann.return.train '<para xmlns="http://docbook.org/ns/docbook"> Returns a train data <type>resource</type> on success, or &false; on error.</para>'>
 
 <!-- Imagick generic return types -->
 <!ENTITY imagick.return.success 'Returns &true; on success.'>
