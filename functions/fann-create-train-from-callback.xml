@@ -4,24 +4,22 @@
 <refentry xml:id="function.fann-create-train-from-callback" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_create_train_from_callback</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Creates the training data struct from a user supplied function</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_create_train_from_callback</methodname>
-   <methodparam><type>string</type><parameter>num_data</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_input</parameter></methodparam>
-   <methodparam><type>string</type><parameter>num_output</parameter></methodparam>
-   <methodparam><type>string</type><parameter>user_function</parameter></methodparam>
+   <type>resource</type><methodname>fann_create_train_from_callback</methodname>
+   <methodparam><type>int</type><parameter>num_data</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_input</parameter></methodparam>
+   <methodparam><type>int</type><parameter>num_output</parameter></methodparam>
+   <methodparam><type>collable</type><parameter>user_function</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Creates the training data struct from a user supplied function. As the training data are numerable (data 1, data 2...),
+   the user must write a function that receives the number of the training data set (input, output) and returns the set.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -31,7 +29,7 @@
     <term><parameter>num_data</parameter></term>
     <listitem>
      <para>
-      
+      The number of training data
      </para>
     </listitem>
    </varlistentry>
@@ -39,7 +37,7 @@
     <term><parameter>num_input</parameter></term>
     <listitem>
      <para>
-      
+      The number of inputs per training data
      </para>
     </listitem>
    </varlistentry>
@@ -47,7 +45,7 @@
     <term><parameter>num_output</parameter></term>
     <listitem>
      <para>
-      
+      The number of ouputs per training data
      </para>
     </listitem>
    </varlistentry>
@@ -55,7 +53,16 @@
     <term><parameter>user_function</parameter></term>
     <listitem>
      <para>
-      
+      The user suplied function with following parameters:
+      <simplelist>
+       <member><literal>num</literal> - The number of the training data set</member>
+       <member><literal>num_input</literal> - The number of inputs per training data</member>
+       <member><literal>num</literal> - The number of ouputs per training dataThe number of inputs per training data</member>
+      </simplelist>
+     </para>
+     <para>
+      The function should return an associative array with keys <literal>input</literal> and <literal>output</literal> and
+      two array values of input and output.
      </para>
     </listitem>
    </varlistentry>
@@ -64,17 +71,46 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
+  &fann.return.train;
  </refsect1>
 
+ <refsect1 role="examples">
+  &reftitle.examples;
+  <para>
+   <example>
+    <title><methodname>fann_create_train_from_callback</methodname> example</title>
+    <programlisting role="php">
+<![CDATA[
+<?php
+function create_train_callback($num_data, $num_input, $num_output) {
+	return array(
+		"input" => array_fill(0, $num_input, 1),
+		"output" => array_fill(0, $num_output, 1),
+	);
+}
+
+$num_data = 3;
+$num_input = 2;
+$num_output = 1;
+$train_data = fann_create_train_from_callback($num_data, $num_input, $num_output, "create_train_callback");
+if ($train_data) {
+    // Do something with $train_data
+}
+?>
+]]>
+    </programlisting>
+   </example>
+  </para>
+ </refsect1>
+ 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_read_train_from_file</function></member>
+    <member><function>fann_train_on_data</function></member>
+    <member><function>fann_destroy_train</function></member>
+    <member><function>fann_save_train</function></member>
    </simplelist>
   </para>
  </refsect1>
