@@ -4,24 +4,21 @@
 <refentry xml:id="function.fann-set-input-scaling-params" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_input_scaling_params</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Calculate input scaling parameters for future use based on training data</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_input_scaling_params</methodname>
+   <type>bool</type><methodname>fann_set_input_scaling_params</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
    <methodparam><type>resource</type><parameter>train_data</parameter></methodparam>
-   <methodparam><type>string</type><parameter>new_input_min</parameter></methodparam>
-   <methodparam><type>string</type><parameter>new_input_max</parameter></methodparam>
+   <methodparam><type>float</type><parameter>new_input_min</parameter></methodparam>
+   <methodparam><type>float</type><parameter>new_input_max</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Calculate input scaling parameters for future use based on training data.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -43,7 +40,7 @@
     <term><parameter>new_input_min</parameter></term>
     <listitem>
      <para>
-      
+      The desired lower bound in input data after scaling (not strictly followed)
      </para>
     </listitem>
    </varlistentry>
@@ -51,7 +48,7 @@
     <term><parameter>new_input_max</parameter></term>
     <listitem>
      <para>
-      
+      The desired upper bound in input data after scaling (not strictly followed)
      </para>
     </listitem>
    </varlistentry>
@@ -61,16 +58,13 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_output_scaling_params</function></member>
    </simplelist>
   </para>
  </refsect1>

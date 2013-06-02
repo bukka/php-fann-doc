@@ -4,21 +4,18 @@
 <refentry xml:id="function.fann-clear-scaling-params" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_clear_scaling_params</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Clears scaling parameters</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_clear_scaling_params</methodname>
+   <type>bool</type><methodname>fann_clear_scaling_params</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Clears scaling parameters.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -36,20 +33,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
-
- <refsect1 role="seealso">
-  &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><function></function></member>
-   </simplelist>
-  </para>
- </refsect1>
-
 
 </refentry>
 
