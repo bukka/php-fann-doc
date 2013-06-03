@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-scale-input" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_scale_input</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Scale data in input vector before feed it to ann based on previously calculated parameters</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_scale_input</methodname>
+   <type>bool</type><methodname>fann_scale_input</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>input_vector</parameter></methodparam>
+   <methodparam><type>array</type><parameter>input_vector</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Scale data in input vector before feed it to ann based on previously calculated parameters.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,7 +32,7 @@
     <term><parameter>input_vector</parameter></term>
     <listitem>
      <para>
-      
+      Input vector that will be scaled
      </para>
     </listitem>
    </varlistentry>
@@ -45,16 +42,14 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_descale_input</function></member>
+    <member><function>fann_scale_output</function></member>
    </simplelist>
   </para>
  </refsect1>
