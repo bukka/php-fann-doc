@@ -4,23 +4,20 @@
 <refentry xml:id="function.fann-scale-train-data" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_scale_train_data</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Scales the inputs and outputs in the training data to the specified range</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_scale_train_data</methodname>
+   <type>bool</type><methodname>fann_scale_train_data</methodname>
    <methodparam><type>resource</type><parameter>train_data</parameter></methodparam>
-   <methodparam><type>string</type><parameter>new_min</parameter></methodparam>
-   <methodparam><type>string</type><parameter>new_max</parameter></methodparam>
+   <methodparam><type>float</type><parameter>new_min</parameter></methodparam>
+   <methodparam><type>float</type><parameter>new_max</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Scales the inputs and outputs in the training data to the specified range.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -36,7 +33,7 @@
     <term><parameter>new_min</parameter></term>
     <listitem>
      <para>
-      
+      New minimum after scaling inputs and outputs in training data.
      </para>
     </listitem>
    </varlistentry>
@@ -44,7 +41,7 @@
     <term><parameter>new_max</parameter></term>
     <listitem>
      <para>
-      
+      New maximum after scaling inputs and outputs in training data.
      </para>
     </listitem>
    </varlistentry>
@@ -54,16 +51,14 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_scale_output_train_data</function></member>
+    <member><function>fann_scale_input_train_data</function></member>
    </simplelist>
   </para>
  </refsect1>
