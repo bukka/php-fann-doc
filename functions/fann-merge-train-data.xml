@@ -4,48 +4,34 @@
 <refentry xml:id="function.fann-merge-train-data" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_merge_train_data</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Merges the train data</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_merge_train_data</methodname>
-   <methodparam><type>resource</type><parameter>train_data</parameter></methodparam>
-   <methodparam><type>string</type><parameter>new_min</parameter></methodparam>
-   <methodparam><type>string</type><parameter>new_max</parameter></methodparam>
+   <type>resource</type><methodname>fann_merge_train_data</methodname>
+   <methodparam><type>resource</type><parameter>data1</parameter></methodparam>
+   <methodparam><type>resource</type><parameter>data2</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Merges the data from data1 and data2 into a new train data <type>resource</type>.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
   &reftitle.parameters;
   <variablelist>
    <varlistentry>
-    <term><parameter>train_data</parameter></term>
+    <term><parameter>data1</parameter></term>
     <listitem>
      &fann.train.description;
     </listitem>
    </varlistentry>
    <varlistentry>
-    <term><parameter>new_min</parameter></term>
+    <term><parameter>data2</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
-    </listitem>
-   </varlistentry>
-   <varlistentry>
-    <term><parameter>new_max</parameter></term>
-    <listitem>
-     <para>
-      
-     </para>
+     &fann.train.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -53,21 +39,10 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   New merged train data <type>resource</type>, or &false; on error.
   </para>
  </refsect1>
-
- <refsect1 role="seealso">
-  &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><function></function></member>
-   </simplelist>
-  </para>
- </refsect1>
-
 
 </refentry>
 
