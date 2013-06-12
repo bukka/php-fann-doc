@@ -4,21 +4,22 @@
 <refentry xml:id="function.fann-get-training-algorithm" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_training_algorithm</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the training algorithm</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_training_algorithm</methodname>
+   <type>int</type><methodname>fann_get_training_algorithm</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Returns the training algorithm. This training algorithm is used by <function>fann_train_on_data</function> and associated functions.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   Note that this algorithm is also used during <function>fann_cascadetrain_on_data</function>, although only
+   <constant>FANN_TRAIN_RPROP</constant> and <constant>FANN_TRAIN_QUICKPROP</constant> is allowed during cascade training.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +36,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   <link linkend="constants.fann-train">Training algorithm</link> constant, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +45,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_training_algorithm</function></member>
    </simplelist>
   </para>
  </refsect1>
