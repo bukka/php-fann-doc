@@ -4,21 +4,23 @@
 <refentry xml:id="function.fann-get-learning-momentum" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_learning_momentum</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the learning momentum</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_learning_momentum</methodname>
+   <type>float</type><methodname>fann_get_learning_momentum</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The learning momentum can be used to speed up <constant>FANN_TRAIN_INCREMENTAL</constant> training.
+   A too high momentum will however not benefit training. Setting momentum to 0 will be the same as
+   not using the momentum parameter. The recommended value of this parameter is between 0.0 and 1.0.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default momentum is 0.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -37,7 +39,7 @@
   &reftitle.returnvalues;
   &fann.return.bool;
   <para>
-    , or &false; on error.
+   The learning momentum, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +47,8 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_learning_momentum</function></member>
+    <member><function>fann_set_training_algorithm</function></member>
    </simplelist>
   </para>
  </refsect1>

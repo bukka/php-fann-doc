@@ -10,15 +10,17 @@
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_learning_rate</methodname>
+   <type>float</type><methodname>fann_get_learning_rate</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The learning rate is used to determine how aggressive training should be for some of the training algorithms
+   (<constant>FANN_TRAIN_INCREMENTAL</constant>, <constant>FANN_TRAIN_BATCH</constant>, <constant>FANN_TRAIN_QUICKPROP</constant>).
+   Do however note that it is not used in <constant>FANN_TRAIN_RPROP</constant>.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default learning rate is 0.7.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +37,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The learning rate, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +46,8 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_learning_rate</function></member>
+    <member><function>fann_set_training_algorithm</function></member>
    </simplelist>
   </para>
  </refsect1>
