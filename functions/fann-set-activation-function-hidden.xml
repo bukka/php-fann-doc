@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-set-activation-function-hidden" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_activation_function_hidden</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Sets the activation function for all of the hidden layers</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_activation_function_hidden</methodname>
+   <type>bool</type><methodname>fann_set_activation_function_hidden</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>activation_function</parameter></methodparam>
+   <methodparam><type>int</type><parameter>activation_function</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Sets the activation function for all of the hidden layers.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,7 +32,7 @@
     <term><parameter>activation_function</parameter></term>
     <listitem>
      <para>
-      
+      The <link linkend="constants.fann-activation-funcs">activation functions</link> constant.
      </para>
     </listitem>
    </varlistentry>
@@ -45,16 +42,16 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_activation_function</function></member>
+    <member><function>fann_set_activation_function_layer</function></member>
+    <member><function>fann_set_activation_function_output</function></member>
+    <member><function>fann_set_activation_steepness</function></member>
    </simplelist>
   </para>
  </refsect1>
