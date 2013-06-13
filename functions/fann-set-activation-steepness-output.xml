@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-set-activation-steepness-output" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_activation_steepness_output</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Sets the steepness of the activation steepness in the output layer</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_activation_steepness_output</methodname>
+   <type>bool</type><methodname>fann_set_activation_steepness_output</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>activation_steepness</parameter></methodparam>
+   <methodparam><type>float</type><parameter>activation_steepness</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Sets the steepness of the activation steepness in the output layer.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,7 +32,7 @@
     <term><parameter>activation_steepness</parameter></term>
     <listitem>
      <para>
-      
+      The activation steepness.
      </para>
     </listitem>
    </varlistentry>
@@ -45,16 +42,17 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_activation_steepness</function></member>
+    <member><function>fann_set_activation_steepness_layer</function></member>
+    <member><function>fann_set_activation_steepness_hidden</function></member>
+    <member><function>fann_get_activation_steepness</function></member>
+    <member><function>fann_set_activation_function</function></member>
    </simplelist>
   </para>
  </refsect1>

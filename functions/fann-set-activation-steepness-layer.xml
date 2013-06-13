@@ -4,23 +4,24 @@
 <refentry xml:id="function.fann-set-activation-steepness-layer" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_activation_steepness_layer</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Sets the activation steepness for all of the neurons in the supplied layer number</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_activation_steepness_layer</methodname>
+   <type>bool</type><methodname>fann_set_activation_steepness_layer</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>activation_steepness</parameter></methodparam>
-   <methodparam><type>string</type><parameter>layer</parameter></methodparam>
+   <methodparam><type>float</type><parameter>activation_steepness</parameter></methodparam>
+   <methodparam><type>int</type><parameter>layer</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Set the activation steepness for all of the neurons in layer number <literal>layer</literal>,
+   counting the input layer as layer 0.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   It is not possible to set activation steepness for the neurons in the input layer.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -36,7 +37,7 @@
     <term><parameter>activation_steepness</parameter></term>
     <listitem>
      <para>
-      
+      The activation steepness.
      </para>
     </listitem>
    </varlistentry>
@@ -44,7 +45,7 @@
     <term><parameter>layer</parameter></term>
     <listitem>
      <para>
-      
+      Layer number.
      </para>
     </listitem>
    </varlistentry>
@@ -54,16 +55,17 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_activation_steepness</function></member>
+    <member><function>fann_set_activation_steepness_hidden</function></member>
+    <member><function>fann_set_activation_steepness_output</function></member>
+    <member><function>fann_get_activation_steepness</function></member>
+    <member><function>fann_set_activation_function</function></member>
    </simplelist>
   </para>
  </refsect1>
