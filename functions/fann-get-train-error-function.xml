@@ -4,21 +4,24 @@
 <refentry xml:id="function.fann-get-train-error-function" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_train_error_function</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the error function used during training</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_train_error_function</methodname>
+   <type>int</type><methodname>fann_get_train_error_function</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Returns the error function used during training.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The error functions are described further in <link linkend="constants.fann-errorfunc">error functions</link> constants.
+  </para>
+  <para>
+   The default error function is <constant>FANN_ERRORFUNC_TANH</constant>.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +38,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The <link linkend="constants.fann-errorfunc">error function</link> constant, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +47,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_train_error_function</function></member>
    </simplelist>
   </para>
  </refsect1>

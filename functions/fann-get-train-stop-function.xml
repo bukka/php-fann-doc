@@ -4,21 +4,24 @@
 <refentry xml:id="function.fann-get-train-stop-function" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_train_stop_function</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the the stop function used during training</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_train_stop_function</methodname>
+   <type>int</type><methodname>fann_get_train_stop_function</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Returns the the stop function used during training.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The stop functions are described further in <link linkend="constants.fann-stopfunc">stop functions</link> constants.
+  </para>
+  <para>
+   The default stop function is <constant>FANN_STOPFUNC_MSE</constant>.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +38,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The <link linkend="constants.fann-stopfunc">stop function</link> constant, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +47,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_train_stop_function</function></member>
    </simplelist>
   </para>
  </refsect1>
