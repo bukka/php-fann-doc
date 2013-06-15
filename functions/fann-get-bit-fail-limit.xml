@@ -4,21 +4,31 @@
 <refentry xml:id="function.fann-get-bit-fail-limit" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_bit_fail_limit</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the bit fail limit used during training</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_bit_fail_limit</methodname>
+   <type>float</type><methodname>fann_get_bit_fail_limit</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Returns the bit fail limit used during training.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The bit fail limit is used during training where the <link linkend="constants.fann-stopfunc">stop function</link>
+   is set to <constant>FANN_STOPFUNC_BIT</constant>.
+  </para>
+  <para>
+   The limit is the maximum accepted difference between the desired output and the actual output during training.
+   Each output that diverges more than this limit is counted as an error bit. This difference is divided by two
+   when dealing with symmetric activation functions, so that symmetric and not symmetric activation functions
+   can use the same limit.
+  </para>
+  <para>
+   The default bit fail limit is 0.35.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +45,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The bit fail limit, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +54,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_bit_fail_limit</function></member>
    </simplelist>
   </para>
  </refsect1>

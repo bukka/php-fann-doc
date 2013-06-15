@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-set-bit-fail-limit" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_bit_fail_limit</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Set the bit fail limit used during training</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_bit_fail_limit</methodname>
+   <type>bool</type><methodname>fann_set_bit_fail_limit</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>bit_fail_limit</parameter></methodparam>
+   <methodparam><type>float</type><parameter>bit_fail_limit</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Set the bit fail limit used during training.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,7 +32,7 @@
     <term><parameter>bit_fail_limit</parameter></term>
     <listitem>
      <para>
-      
+      The bit fail limit.
      </para>
     </listitem>
    </varlistentry>
@@ -45,20 +42,16 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_get_bit_fail_limit</function></member>
    </simplelist>
   </para>
  </refsect1>
-
 
 </refentry>
 
