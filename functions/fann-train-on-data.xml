@@ -53,7 +53,7 @@
     <term><parameter>epochs_between_reports</parameter></term>
     <listitem>
      <para>
-      The number of epochs between calling a user function. A value of zero means that user function is not called.
+      The number of epochs between calling a callback function. A value of zero means that user function is not called.
      </para>
     </listitem>
    </varlistentry>

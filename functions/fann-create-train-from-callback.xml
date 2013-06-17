@@ -53,7 +53,7 @@
     <term><parameter>user_function</parameter></term>
     <listitem>
      <para>
-      The user suplied function with following parameters:
+      The user supplied function with following parameters:
       <simplelist>
        <member><literal>num</literal> - The number of the training data set</member>
        <member><literal>num_input</literal> - The number of inputs per training data</member>
