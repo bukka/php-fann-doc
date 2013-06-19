@@ -4,21 +4,22 @@
 <refentry xml:id="function.fann-get-quickprop-decay" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_quickprop_decay</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the decay which is a factor that weights should decrease in each iteration during quickprop training</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_quickprop_decay</methodname>
+   <type>float</type><methodname>fann_get_quickprop_decay</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The decay is a small negative valued number which is a factor that the weights should decrease in each iteration
+   during quickprop training. This is used to make sure that the weights do not become too high during training.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default decay is -0.0001.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +36,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The decay, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +45,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_quickprop_decay</function></member>
    </simplelist>
   </para>
  </refsect1>
