@@ -4,21 +4,21 @@
 <refentry xml:id="function.fann-get-rprop-delta-max" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_rprop_delta_max</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the maximum step-size</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_rprop_delta_max</methodname>
+   <type>float</type><methodname>fann_get_rprop_delta_max</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The maximum step-size is a positive number determining how large the maximum step-size may be.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default delta max is 50.0.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +35,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The maximum step-size, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +44,8 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_rprop_delta_max</function></member>
+    <member><function>fann_get_rprop_delta_min</function></member>
    </simplelist>
   </para>
  </refsect1>

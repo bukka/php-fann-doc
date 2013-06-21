@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-set-rprop-delta-max" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_rprop_delta_max</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Sets the maximum step-size</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_rprop_delta_max</methodname>
+   <type>bool</type><methodname>fann_set_rprop_delta_max</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>rprop_delta_max</parameter></methodparam>
+   <methodparam><type>float</type><parameter>rprop_delta_max</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The maximum step-size is a positive number determining how large the maximum step-size may be.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,7 +32,7 @@
     <term><parameter>rprop_delta_max</parameter></term>
     <listitem>
      <para>
-      
+      The maximum step-size.
      </para>
     </listitem>
    </varlistentry>
@@ -45,16 +42,14 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_get_rprop_delta_max</function></member>
+    <member><function>fann_get_rprop_delta_min</function></member>
    </simplelist>
   </para>
  </refsect1>
