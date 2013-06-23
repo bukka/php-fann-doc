@@ -4,21 +4,21 @@
 <refentry xml:id="function.fann-get-sarprop-step-error-threshold-factor" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_sarprop_step_error_threshold_factor</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the sarprop step error threshold factor</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_sarprop_step_error_threshold_factor</methodname>
+   <type>float</type><methodname>fann_get_sarprop_step_error_threshold_factor</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The sarprop step error threshold factor.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default factor is 0.1.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +35,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+    The sarprop step error threshold factor, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +44,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_sarprop_step_error_threshold_factor</function></member>
    </simplelist>
   </para>
  </refsect1>

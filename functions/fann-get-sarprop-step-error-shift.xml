@@ -4,21 +4,21 @@
 <refentry xml:id="function.fann-get-sarprop-step-error-shift" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_sarprop_step_error_shift</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the sarprop step error shift</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_sarprop_step_error_shift</methodname>
+   <type>float</type><methodname>fann_get_sarprop_step_error_shift</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Returns the sarprop step error shift.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default step error shift is 1.385.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +35,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The sarprop step error shift , or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +44,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_sarprop_step_error_shift</function></member>
    </simplelist>
   </para>
  </refsect1>
