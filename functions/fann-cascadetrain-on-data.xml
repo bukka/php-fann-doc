@@ -4,25 +4,31 @@
 <refentry xml:id="function.fann-cascadetrain-on-data" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_cascadetrain_on_data</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Trains on an entire dataset, for a period of time using the Cascade2 training algorithm</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_cascadetrain_on_data</methodname>
+   <type>bool</type><methodname>fann_cascadetrain_on_data</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
    <methodparam><type>resource</type><parameter>data</parameter></methodparam>
-   <methodparam><type>string</type><parameter>max_neurons</parameter></methodparam>
-   <methodparam><type>string</type><parameter>neurons_between_reports</parameter></methodparam>
-   <methodparam><type>string</type><parameter>desired_error</parameter></methodparam>
+   <methodparam><type>int</type><parameter>max_neurons</parameter></methodparam>
+   <methodparam><type>int</type><parameter>neurons_between_reports</parameter></methodparam>
+   <methodparam><type>float</type><parameter>desired_error</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The cascade output change fraction is a number between 0 and 1 determining how large a fraction
+   the <function>fann_get_MSE</function> value should change within <function>fann_get_cascade_output_stagnation_epochs</function>
+   during training of the output connections, in order for the training not to stagnate.  If the training stagnates,
+   the training of the output connections will be ended and new candidates will be prepared.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   This training uses the parameters set using the fann_set_cascade_..., but it also uses another training algorithm
+   as it’s internal training algorithm. This algorithm can be set to either <constant>FANN_TRAIN_RPROP</constant> or
+   <constant>FANN_TRAIN_QUICKPROP</constant> by <function>fann_set_training_algorithm</function>, and the parameters
+   set for these training algorithms will also affect the cascade training.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -44,7 +50,7 @@
     <term><parameter>max_neurons</parameter></term>
     <listitem>
      <para>
-      
+      The maximum number of neurons to be added to neural network.
      </para>
     </listitem>
    </varlistentry>
@@ -52,7 +58,7 @@
     <term><parameter>neurons_between_reports</parameter></term>
     <listitem>
      <para>
-      
+      The number of neurons between printing a status report. A value of zero means no reports should be printed.
      </para>
     </listitem>
    </varlistentry>
@@ -60,7 +66,8 @@
     <term><parameter>desired_error</parameter></term>
     <listitem>
      <para>
-      
+      The desired <function>fann_get_MSE</function> or <function>fann_get_bit_fail</function>,
+      depending on which stop function is chosen by <function>fann_set_train_stop_function</function>
      </para>
     </listitem>
    </varlistentry>
@@ -70,16 +77,14 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_train_on_data</function></member>
+    <member><function>fann_cascadetrain_on_file</function></member>
    </simplelist>
   </para>
  </refsect1>
