@@ -4,21 +4,25 @@
 <refentry xml:id="function.fann-get-cascade-candidate-limit" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_cascade_candidate_limit</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Return the candidate limit</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_cascade_candidate_limit</methodname>
+   <type>float</type><methodname>fann_get_cascade_candidate_limit</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The candidate limit is a limit for how much the candidate neuron may be trained. The limit is a limit
+   on the proportion between the MSE and candidate score.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   Set this to a lower value to avoid overfitting and to a higher if overfitting is not a problem.
+  </para>
+  <para>
+   The default candidate limit is 1000.0.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +39,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The candidate limit, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +48,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_cascade_candidate_limit</function></member>
    </simplelist>
   </para>
  </refsect1>

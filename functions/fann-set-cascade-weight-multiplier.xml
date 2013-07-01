@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-set-cascade-weight-multiplier" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_cascade_weight_multiplier</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Sets the weight multiplier</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_cascade_weight_multiplier</methodname>
+   <type>bool</type><methodname>fann_set_cascade_weight_multiplier</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>cascade_weight_multiplier</parameter></methodparam>
+   <methodparam><type>float</type><parameter>cascade_weight_multiplier</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Sets the weight multiplier.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,7 +32,7 @@
     <term><parameter>cascade_weight_multiplier</parameter></term>
     <listitem>
      <para>
-      
+      The weight multiplier.
      </para>
     </listitem>
    </varlistentry>
@@ -45,16 +42,13 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_get_cascade_weight_multiplier</function></member>
    </simplelist>
   </para>
  </refsect1>
