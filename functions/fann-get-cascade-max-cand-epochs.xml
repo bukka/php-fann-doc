@@ -4,21 +4,22 @@
 <refentry xml:id="function.fann-get-cascade-max-cand-epochs" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_cascade_max_cand_epochs</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the maximum candidate epochs</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_cascade_max_cand_epochs</methodname>
+   <type>int</type><methodname>fann_get_cascade_max_cand_epochs</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The maximum candidate epochs determines the maximum number of epochs the input connections
+   to the candidates may be trained before adding a new candidate neuron.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default max candidate epochs is 150.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +36,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The maximum candidate epochs, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +45,7 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_set_cascade_max_cand_epochs</function></member>
    </simplelist>
   </para>
  </refsect1>
