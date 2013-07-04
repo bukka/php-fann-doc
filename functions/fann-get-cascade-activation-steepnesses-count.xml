@@ -4,21 +4,21 @@
 <refentry xml:id="function.fann-get-cascade-activation-steepnesses-count" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_cascade_activation_steepnesses_count</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>The number of activation steepnesses</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_cascade_activation_steepnesses_count</methodname>
+   <type>int</type><methodname>fann_get_cascade_activation_steepnesses_count</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The number of activation steepnesses in the <function>fann_get_cascade_activation_functions</function> array.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default number of activation steepnesses is 4.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +35,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The number of activation steepnesses, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +44,8 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_get_cascade_activation_steepnesses</function></member>
+    <member><function>fann_set_cascade_activation_functions</function></member>
    </simplelist>
   </para>
  </refsect1>

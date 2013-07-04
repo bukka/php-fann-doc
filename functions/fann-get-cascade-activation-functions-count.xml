@@ -4,21 +4,21 @@
 <refentry xml:id="function.fann-get-cascade-activation-functions-count" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_cascade_activation_functions_count</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the number of cascade activation functions</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_get_cascade_activation_functions_count</methodname>
+   <type>int</type><methodname>fann_get_cascade_activation_functions_count</methodname>
    <methodparam><type>resource</type><parameter>ann</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   The number of activation functions in the <function>fann_get_cascade_activation_functions</function> array.
   </para>
-
-  &warn.undocumented.func;
-
+  <para>
+   The default number of activation functions is 6.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -35,9 +35,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
   <para>
-    , or &false; on error.
+   The number of cascade activation functions, or &false; on error.
   </para>
  </refsect1>
 
@@ -45,7 +44,8 @@
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_get_cascade_activation_functions</function></member>
+    <member><function>fann_set_cascade_activation_functions</function></member>
    </simplelist>
   </para>
  </refsect1>
