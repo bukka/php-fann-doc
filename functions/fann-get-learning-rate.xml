@@ -4,7 +4,7 @@
 <refentry xml:id="function.fann-get-learning-rate" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_get_learning_rate</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Returns the learning rate</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">

@@ -4,21 +4,18 @@
 <refentry xml:id="function.fann-reset-errstr" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_reset_errstr</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Resets the last error string</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_reset_errstr</methodname>
-   <methodparam><type>string</type><parameter>errdat</parameter></methodparam>
+   <type>void</type><methodname>fann_reset_errstr</methodname>
+   <methodparam><type>resource</type><parameter>errdat</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Resets the last error string.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -27,9 +24,7 @@
    <varlistentry>
     <term><parameter>errdat</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.errdat.description;
     </listitem>
    </varlistentry>
   </variablelist>
@@ -37,17 +32,15 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
+  &fann.return.void;
  </refsect1>
 
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
    <simplelist>
-    <member><function></function></member>
+    <member><function>fann_get_errstr</function></member>
+    <member><function>fann_reset_errno</function></member>
    </simplelist>
   </para>
  </refsect1>

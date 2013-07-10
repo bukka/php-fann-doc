@@ -4,22 +4,19 @@
 <refentry xml:id="function.fann-set-error-log" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>fann_set_error_log</refname>
-  <refpurpose></refpurpose>
+  <refpurpose>Sets where the errors are logged to</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_error_log</methodname>
-   <methodparam><type>string</type><parameter>errdat</parameter></methodparam>
+   <type>void</type><methodname>fann_set_error_log</methodname>
+   <methodparam><type>resource</type><parameter>errdat</parameter></methodparam>
    <methodparam><type>string</type><parameter>log_file</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Sets where the errors are logged to.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -28,16 +25,14 @@
    <varlistentry>
     <term><parameter>errdat</parameter></term>
     <listitem>
-     <para>
-      
-     </para>
+     &fann.errdat.description;
     </listitem>
    </varlistentry>
    <varlistentry>
     <term><parameter>log_file</parameter></term>
     <listitem>
      <para>
-      
+      The log file path.
      </para>
     </listitem>
    </varlistentry>
@@ -46,21 +41,8 @@
 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  &fann.return.bool;
-  <para>
-    , or &false; on error.
-  </para>
+  &fann.return.void;
  </refsect1>
-
- <refsect1 role="seealso">
-  &reftitle.seealso;
-  <para>
-   <simplelist>
-    <member><function></function></member>
-   </simplelist>
-  </para>
- </refsect1>
-
 
 </refentry>
 
