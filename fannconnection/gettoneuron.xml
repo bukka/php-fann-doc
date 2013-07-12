@@ -4,21 +4,18 @@
 <refentry xml:id="fannconnection.gettoneuron" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>FANNConnection::getToNeuron</refname>
-  <refpurpose>The getToNeuron purpose</refpurpose>
+  <refpurpose>Returns the postions of terminating neuron</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
-   <modifier>public</modifier> <type>void</type><methodname>FANNConnection::getToNeuron</methodname>
+   <modifier>public</modifier> <type>int</type><methodname>FANNConnection::getToNeuron</methodname>
    <void />
   </methodsynopsis>
   <para>
-
+   Returns the postions of terminating neuron.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -29,7 +26,7 @@
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   <para>
-
+   The postions of terminating neuron.
   </para>
  </refsect1>
 

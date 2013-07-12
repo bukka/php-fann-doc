@@ -4,31 +4,23 @@
 <refentry xml:id="fannconnection.setweight" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>FANNConnection::setWeight</refname>
-  <refname>fann_set_weight</refname>
-  <refpurpose>The setWeight purpose</refpurpose>
+  <refpurpose>Sets the connections weight</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
-  <para>&style.oop; (method):</para>
-   <methodsynopsis>
-   <modifier>public</modifier> <type>void</type><methodname>FANNConnection::setWeight</methodname>
-   <methodparam><type>string</type><parameter>weight</parameter></methodparam>
-   </methodsynopsis>
-  <para>&style.procedural;:</para>
   <methodsynopsis>
-   <type>ReturnType</type><methodname>fann_set_weight</methodname>
-   <methodparam><type>string</type><parameter>ann</parameter></methodparam>
-   <methodparam><type>string</type><parameter>from_neuron</parameter></methodparam>
-   <methodparam><type>string</type><parameter>to_neuron</parameter></methodparam>
-   <methodparam><type>string</type><parameter>weight</parameter></methodparam>
+   <modifier>public</modifier> <type>bool</type><methodname>FANNConnection::setWeight</methodname>
+   <methodparam><type>float</type><parameter>weight</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Sets the connection weight.
   </para>
-  
-  &warn.undocumented.func;
- 
+  <para>
+    This method is different than <function>fann_set_weight</function>. It does not
+   update the weight value in the network. The network value is updated only after calling
+   <function>fann_set_weight_array</function>.
+  </para>
  </refsect1>
 
  <refsect1 role="parameters">
@@ -36,48 +28,22 @@
   <para>
    <variablelist>
     <varlistentry>
-     <term><parameter>ann</parameter></term>
-     <listitem>
-      <para>
-       
-      </para>
-     </listitem>
-    </varlistentry>
-    <varlistentry>
-     <term><parameter>from_neuron</parameter></term>
-     <listitem>
-      <para>
-       
-      </para>
-     </listitem>
-    </varlistentry>
-    <varlistentry>
-     <term><parameter>to_neuron</parameter></term>
-     <listitem>
-      <para>
-       
-      </para>
-     </listitem>
-    </varlistentry>
-    <varlistentry>
      <term><parameter>weight</parameter></term>
      <listitem>
       <para>
-       
+       The connection weight.
       </para>
      </listitem>
     </varlistentry>
    </variablelist>
   </para>
  </refsect1>
-
+ 
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
-  <para>
-
-  </para>
+  &fann.return.bool;
  </refsect1>
-
+ 
 
 </refentry>
 

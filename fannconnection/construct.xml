@@ -4,23 +4,20 @@
 <refentry xml:id="fannconnection.construct" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
   <refname>FANNConnection::__construct</refname>
-  <refpurpose>The __construct purpose</refpurpose>
+  <refpurpose>The connection constructor</refpurpose>
  </refnamediv>
 
  <refsect1 role="description">
   &reftitle.description;
   <methodsynopsis>
    <modifier>public</modifier> <methodname>FANNConnection::__construct</methodname>
-   <methodparam><type>string</type><parameter>from_neuron</parameter></methodparam>
-   <methodparam><type>string</type><parameter>to_neuron</parameter></methodparam>
-   <methodparam><type>string</type><parameter>weight</parameter></methodparam>
+   <methodparam><type>int</type><parameter>from_neuron</parameter></methodparam>
+   <methodparam><type>int</type><parameter>to_neuron</parameter></methodparam>
+   <methodparam><type>float</type><parameter>weight</parameter></methodparam>
   </methodsynopsis>
   <para>
-
+   Create new connection and initialize its params. After creating the connection, only weight can be changed.
   </para>
-
-  &warn.undocumented.func;
-
  </refsect1>
 
  <refsect1 role="parameters">
@@ -30,7 +27,7 @@
     <term><parameter>from_neuron</parameter></term>
     <listitem>
      <para>
-      
+      The postion number of starting neuron.
      </para>
     </listitem>
    </varlistentry>
@@ -38,7 +35,7 @@
     <term><parameter>to_neuron</parameter></term>
     <listitem>
      <para>
-      
+      The postion number of terminating neuron.
      </para>
     </listitem>
    </varlistentry>
@@ -46,20 +43,12 @@
     <term><parameter>weight</parameter></term>
     <listitem>
      <para>
-      
+      The connection weight value.
      </para>
     </listitem>
    </varlistentry>
   </variablelist>
  </refsect1>
-
- <refsect1 role="returnvalues">
-  &reftitle.returnvalues;
-  <para>
-
-  </para>
- </refsect1>
-
 
 </refentry>
 
