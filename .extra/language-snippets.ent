@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 330300 $ -->
+<!-- $Revision: 331031 $ -->
 <!-- Keep 'em sorted -->
 
 <!ENTITY changelog.randomseed '<row xmlns="http://docbook.org/ns/docbook"><entry>4.2.0</entry><entry>The random
@@ -531,7 +531,7 @@ conn</parameter></term><listitem><para>An MCVE_CONN resource returned by
 
 <!ENTITY password.parameter.hash 'A hash created by <function xmlns="http://docbook.org/ns/docbook">password_hash</function>.'>
 
-<!ENTITY password.parameter.options 'An associative array containing options. Currently, two options are supported: <literal xmlns="http://docbook.org/ns/docbook">salt</literal>, to provide a salt to use when hashing the password, and <literal xmlns="http://docbook.org/ns/docbook">cost</literal>, which denotes the algorithmic cost that should be used. Examples of these values can be found on the <function xmlns="http://docbook.org/ns/docbook">crypt</function> page.'>
+<!ENTITY password.parameter.options 'An associative array containing options. See the <link xmlns="http://docbook.org/ns/docbook" linkend="password.constants">password algorithm constants</link> for documentation on the supported options for each algorithm.'>
 
 <!ENTITY password.parameter.password 'The user&apos;s password.'>
 
@@ -728,7 +728,7 @@ and <constant>ORACLE_SID</constant> to determine the
 To use the Easy Connect naming method, PHP must be linked with Oracle
 10g or greater Client libraries. The Easy Connect string for Oracle
 10g is of the form:
-<emphasis>[//]host_name[:port][/service_name]</emphasis>. With Oracle
+<emphasis>[//]host_name[:port][/service_name]</emphasis>. From Oracle
 11g, the syntax is:
 <emphasis>[//]host_name[:port][/service_name][:server_type][/instance_name]</emphasis>.
 Service names can be found by running the Oracle
@@ -757,7 +757,7 @@ Oracle Client libraries determine a character set from
 the <constant>NLS_LANG</constant> environment variable.
 </para>
 <para xmlns='http://docbook.org/ns/docbook'>Passing this parameter can
-reduce connection time.
+reduce the time taken to connect.
 </para>">
 
 <!ENTITY oci.sessionmode '<para xmlns="http://docbook.org/ns/docbook">This
@@ -1734,3 +1734,11 @@ paths</simpara></warning>
 <!ENTITY mongo.errors.deprecated '<para xmlns="http://docbook.org/ns/docbook">Issues <constant>E_DEPRECATED</constant> warning</para>'>
 <!ENTITY mongo.gridfs.store.metadata.note '<note xmlns="http://docbook.org/ns/docbook"><para>These fields may also overwrite those that would be created automatically by the driver, as described in the MongoDB core documentation for the <link xlink:href="&url.mongodb.docs.gridfs;#the-files-collection" xmlns:xlink="http://www.w3.org/1999/xlink">files collection</link>. Some practical use cases for this behavior would be to specify a custom <literal>chunkSize</literal> or <literal>_id</literal> for the file.</para></note>'>
 <!ENTITY mongo.gridfs.store.return '<para xmlns="http://docbook.org/ns/docbook">Returns the <literal>_id</literal> of the saved file document. This will be a generated <classname>MongoId</classname> unless an <literal>_id</literal> was explicitly specified in the <parameter>extra</parameter> parameter.</para>'>
+
+<!-- Radius -->
+<!ENTITY radius.request.required '<note xmlns="http://docbook.org/ns/docbook"><para>A request must be created via <function>radius_create_request</function> before this function can be called.</para></note>'>
+<!ENTITY radius.parameter.attribute-type '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>type</parameter></term><listitem><para>The attribute type.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.handle '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>radius_handle</parameter></term><listitem><para>The RADIUS resource.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.options '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>options</parameter></term><listitem><para>A bitmask of the attribute options. The available options include <link linkend="constant.radius-option-tagged"><constant>RADIUS_OPTION_TAGGED</constant></link> and <link linkend="constant.radius-option-salt"><constant>RADIUS_OPTION_SALT</constant></link>.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.tag '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>tag</parameter></term><listitem><para>The attribute tag. This parameter is ignored unless the <link linkend="constant.radius-option-tagged"><constant>RADIUS_OPTION_TAGGED</constant></link> option is set.</para></listitem></varlistentry>'>
+<!ENTITY radius.parameter.vendor '<varlistentry xmlns="http://docbook.org/ns/docbook"><term><parameter>vendor</parameter></term><listitem><para>The vendor ID.</para></listitem></varlistentry>'>
