@@ -10,13 +10,13 @@
    PHP &gt;= 5.2.0 and libfann &gt;= 2.1.0
   </para>
  </section>
- 
+
  <section xml:id="fann.installation">
   &reftitle.install;
   <para>
    The FANN PHP extension should work on all Linux systems.
  </para>
-  
+
   <simplelist>
    <member>
     <xref linkend="fann.installation.lib" />
@@ -63,7 +63,7 @@ $ sudo apt-get install libfann-dev
   <section xml:id="fann.installation.pecl">
 
    <title>PECL Installation</title>
-   
+
    <para>
     This extension is available on PECL. The installation is very simple. Just run:
     <programlisting>
@@ -77,15 +77,15 @@ $ sudo pecl install fann
   </section>
 
   <section xml:id="fann.installation.manual">
-   
+
    <title>Manual Installation</title>
 
    <para>
-    For developers and people interested in the latest changes, you 
-    can compile the driver from the latest source code on 
+    For developers and people interested in the latest changes, you
+    can compile the driver from the latest source code on
     <link xlink:href="&url.fann.github;">Github</link>.
     Go to Github and click the "Download ZIP" button. Then run:
-    
+
     <programlisting>
 <![CDATA[
 
@@ -106,8 +106,8 @@ $ sudo make install
    <itemizedlist>
     <listitem>
      <para>
-      Make sure the <emphasis>extension_dir</emphasis> variable is pointing to 
-      the directory containing <emphasis>fann.so</emphasis>. The build will display where 
+      Make sure the <emphasis>extension_dir</emphasis> variable is pointing to
+      the directory containing <emphasis>fann.so</emphasis>. The build will display where
       it is installing the PHP driver with output that looks something like:
       <programlisting>
 <![CDATA[
@@ -129,14 +129,14 @@ $ php -i | grep extension_dir
 ]]>
       </programlisting>
 
-      If it's not, change the <emphasis>extension_dir</emphasis> in php.ini or 
+      If it's not, change the <emphasis>extension_dir</emphasis> in php.ini or
       move <emphasis>fann.so</emphasis>.
      </para>
     </listitem>
     <listitem>
      <para>
       To load the extension on PHP startup, add a line:
-      
+
       <programlisting>
 <![CDATA[
 
@@ -144,10 +144,10 @@ extension=fann.so
 
 ]]>
       </programlisting>
-      
+
      </para>
    </listitem>
-    
+
    </itemizedlist>
   </section>
  </section>

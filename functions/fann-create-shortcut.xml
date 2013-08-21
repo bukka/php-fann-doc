@@ -56,7 +56,7 @@
     <term><parameter>...</parameter></term>
     <listitem>
      <para>
-      Number of neurons in other layers.      
+      Number of neurons in other layers.
      </para>
     </listitem>
    </varlistentry>

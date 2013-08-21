@@ -38,12 +38,12 @@
    </variablelist>
   </para>
  </refsect1>
- 
+
  <refsect1 role="returnvalues">
   &reftitle.returnvalues;
   &fann.return.bool;
  </refsect1>
- 
+
 
 </refentry>
 

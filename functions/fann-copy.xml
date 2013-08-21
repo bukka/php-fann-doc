@@ -36,7 +36,7 @@
    Returns a copy of neural network resource on success, or &false; on error
   </para>
  </refsect1>
- 
+
  <refsect1 role="seealso">
   &reftitle.seealso;
   <para>
