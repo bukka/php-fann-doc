@@ -2,7 +2,7 @@
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN"
 "{PATH_TO_DOCBASE}/docbook/docbook-xml/docbook.dtd" [
 
-<!-- $Revision$ -->
+<!-- $Revision: 331220 $ -->
 <!-- We use xhtml entities all over the place -->
 <!ENTITY % xhtml-lat1        SYSTEM "{PATH_TO_DOCBASE}/entities/ISO/xhtml1-lat1.ent">
 <!ENTITY % xhtml-symbol      SYSTEM "{PATH_TO_DOCBASE}/entities/ISO/xhtml1-symbol.ent">
