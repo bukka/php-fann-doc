@@ -1,6 +1,6 @@
 <!-- -*- SGML -*-
 
- $Id: global.ent 330991 2013-07-21 02:36:27Z cataphract $
+ $Id: global.ent 331221 2013-08-28 19:12:26Z bukka $
 
  Contains global "macros" for all the XML documents.
 
@@ -122,7 +122,7 @@
 <!ENTITY url.fam "http://oss.sgi.com/projects/fam/">
 <!ENTITY url.fam.download "http://oss.sgi.com/projects/fam/download.html">
 <!ENTITY url.fann.lib "http://leenissen.dk/fann/wp/">
-<!ENTITY url.fann.github "https://github.com/php/pecl-tools-fann">
+<!ENTITY url.fann.github "https://github.com/bukka/php-fann">
 <!ENTITY url.fastio "http://www.fastio.com/">
 <!ENTITY url.fbsql "http://www.frontbase.com/">
 <!ENTITY url.fbsql.docs "http://www.frontbase.com/cgi-bin/WebObjects/FBWebSite.woa">
@@ -251,7 +251,7 @@
 <!ENTITY url.ldap.openldap-c-api "http://www.openldap.org/devel/cvsweb.cgi/~checkout~/doc/drafts/draft-ietf-ldapext-ldap-c-api-xx.txt">
 <!ENTITY url.libedit "http://www.thrysoee.dk/editline/">
 <!ENTITY url.libiconv "http://www.gnu.org/software/libiconv/">
-<!ENTITY url.liblzf "http://www.goof.com/pcg/marc/liblzf.html">
+<!ENTITY url.liblzf "http://oldhome.schmorp.de/marc/liblzf.html">
 <!ENTITY url.libmagic "http://sf.net/projects/libmagic">
 <!ENTITY url.libxml "http://www.xmlsoft.org/">
 <!ENTITY url.libxml.errorcodes "http://www.xmlsoft.org/html/libxml-xmlerror.html">
@@ -526,6 +526,7 @@
 <!ENTITY url.spl.doxygen "http://www.php.net/~helly/php/ext/spl/">
 <!ENTITY url.spplus "http://www.spplus.net/">
 <!ENTITY url.sqlite "http://sqlite.org/">
+<!ENTITY url.sqlite.collation "http://sqlite.org/datatype3.html#collation">
 <!ENTITY url.sqlite.interface.c "http://sqlite.org/c_interface.html">
 <!ENTITY url.sqlsrv "http://msdn.microsoft.com/en-us/sqlserver/ff657782.aspx">
 <!ENTITY url.sqlsrv.connection.options "http://msdn.microsoft.com/en-us/library/ff628167.aspx">
