@@ -2,7 +2,7 @@
 <!DOCTYPE set PUBLIC "-//OASIS//DTD DocBook XML V5.0//EN"
 "./docbook/docbook-xml/docbook.dtd" [
 
-<!-- $Revision: 331221 $ -->
+<!-- $Revision: 338527 $ -->
 
 <!-- Add translated specific definitions and snippets -->
 @TRANSLATION_ONLY_INCL_BEGIN@
@@ -77,6 +77,7 @@
   &language.functions;
   &language.oop5;
   &language.namespaces;
+  &language.errors;
   &language.exceptions;
   &language.generators;
   &language.references;
@@ -116,6 +117,7 @@
   &features.safe-mode;
   &features.commandline;
   &features.gc;
+  &features.dtrace;
  </book>
 
  <set xml:id="funcref">
@@ -135,6 +137,7 @@
   <set xml:id="refs.basic.php">
    <title>&AffectingPHPsBehaviour;</title>
    &reference.apc.book;
+   &reference.apcu.book;
    &reference.apd.book;
    &reference.bcompiler.book;
    &reference.blenc.book;
@@ -147,6 +150,7 @@
    &reference.info.book;
    &reference.runkit.book;
    &reference.scream.book;
+   &reference.uopz.book;
    &reference.weakref.book;
    &reference.wincache.book;
    &reference.xhprof.book;
@@ -164,12 +168,6 @@
    <title>&AuthenticationServices;</title>
    &reference.kadm5.book;
    &reference.radius.book;
-  </set>
-
-  <set xml:id="refs.calendar">
-   <title>&CalendarandEventRelatedExtensions;</title>
-   &reference.calendar.book;
-   &reference.datetime.book;
   </set>
 
   <set xml:id="refs.utilspec.cmdline">
@@ -198,6 +196,7 @@
   <set xml:id="refs.crypto">
    <title>&CryptographyExtensions;</title>
    &reference.crack.book;
+   &reference.csprng.book;
    &reference.hash.book;
    &reference.mcrypt.book;
    &reference.mhash.book;
@@ -229,11 +228,11 @@
     &reference.ingres-ii.book;
     &reference.maxdb.book;
     &reference.mongo.book;
+    &reference.mongodb.set;
     &reference.msql.book;
     &reference.mssql.book;
     &reference.mysqlinfo.set;
     &reference.oci8.book;
-    &reference.ovrimos.book;
     &reference.paradox.book;
     &reference.pgsql.book;
     &reference.sqlite.book;
@@ -242,6 +241,13 @@
     &reference.sybase.book;
     &reference.tokyo-tyrant.book;
    </set>
+  </set>
+
+  <set xml:id="refs.calendar">
+   <title>&CalendarandEventRelatedExtensions;</title>
+   &reference.calendar.book;
+   &reference.datetime.book;
+   &reference.hrtime.book;
   </set>
 
   <set xml:id="refs.fileprocess.file">
@@ -272,10 +278,6 @@
    &reference.mbstring.book;
    &reference.pspell.book;
    &reference.recode.book;
-   <!-- FIXME PHP_6
-   &reference.i18n.book;
-   &reference.unicode.book;
-   -->
   </set>
 
   <set xml:id="refs.utilspec.image">
@@ -315,7 +317,6 @@
    &reference.pdf.book;
    &reference.ps.book;
    &reference.rpmreader.book;
-   &reference.swf.book;
   </set>
 
   <set xml:id="refs.fileprocess.process">
@@ -330,6 +331,7 @@
    &reference.pthreads.book;
    &reference.sem.book;
    &reference.shmop.book;
+   &reference.sync.book;
   </set>
 
   <set xml:id="refs.basic.other">
@@ -355,7 +357,6 @@
 
   <set xml:id="refs.remote.other">
    <title>&OtherServices;</title>
-   &reference.amqp.book;
    &reference.chdb.book;
    &reference.curl.book;
    &reference.event.book;
@@ -364,12 +365,8 @@
    &reference.gearman.book;
    &reference.net-gopher.book;
    &reference.gupnp.book;
-   &reference.http.book;
-   &reference.hw.book;
    &reference.hwapi.book;
-   &reference.java.book;
    &reference.ldap.book;
-   &reference.notes.book;
    &reference.memcache.book;
    &reference.memcached.book;
    &reference.mqseries.book;
@@ -386,6 +383,7 @@
    &reference.varnish.book;
    &reference.yaz.book;
    &reference.nis.book; 
+   &reference.zmq.book; 
   </set>
 
   <set xml:id="refs.search">
@@ -399,6 +397,7 @@
   <set xml:id="refs.utilspec.server">
    <title>&ServerSpecificExtensions;</title>
    &reference.apache.book;
+   &reference.fpm.book;
    &reference.iisfunc.book;
    &reference.nsapi.book;
   </set>
@@ -427,7 +426,6 @@
    &reference.ctype.book;
    &reference.filter.book;
    &reference.funchand.book;
-   &reference.objaggregation.book;
    &reference.quickhash.book;
    &reference.reflection.book;
    &reference.var.book;
@@ -438,15 +436,13 @@
    &reference.oauth.book;
    &reference.sca.book;
    &reference.soap.book;
+   &reference.yar.book;
    &reference.xmlrpc.book;
   </set>
 
   <set xml:id="refs.utilspec.windows">
    <title>&WindowsOnlyExtensions;</title>
-   &reference.dotnet.book;
    &reference.com.book;
-   &reference.printer.book;
-   &reference.w32api.book;
    &reference.win32ps.book;
    &reference.win32service.book;
   </set>
@@ -455,17 +451,16 @@
    <title>&XMLManipulation;</title>
    &reference.dom.book;
    &reference.libxml.book;
-   &reference.qtdom.book;
    &reference.sdo.book;
    &reference.sdodasrel.book;
    &reference.sdo-das-xml.book;
    &reference.simplexml.book;
    &reference.wddx.book;
+   &reference.xmldiff.book;
    &reference.xml.book;
    &reference.xmlreader.book;
    &reference.xmlwriter.book;
    &reference.xsl.book;
-   &reference.xslt.book;
   </set>
  </set>
 
@@ -502,7 +497,6 @@
   &faq.passwords;
   &faq.html;
   &faq.com;
-  &faq.languages;
   &faq.migration5;
   &faq.misc;
  </book>
@@ -510,6 +504,8 @@
  <book xml:id="appendices">
   <title>&Appendices;</title>
   &appendices.history;
+  &appendices.migration70;
+  &appendices.migration56;
   &appendices.migration55;
   &appendices.migration54;
   &appendices.migration53;
@@ -546,10 +542,7 @@
   &chmonly.aboutchm;
   &chmonly.usingchm;
   &chmonly.search;
-  &chmonly.specialities;
   &chmonly.integration;
-  &chmonly.skins;
-  &chmonly.credits;
  </book>
  @CHMONLY_INCL_END@
 
