@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 331220 $ -->
+<!-- $Revision: 331305 $ -->
 
 <chapter xml:id="fann.setup" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.setup;
@@ -89,8 +89,8 @@ $ sudo pecl install fann
     <programlisting>
 <![CDATA[
 
-$ unzip pecl-tools-fann-master.zip
-$ cd pecl-tools-fann-master
+$ unzip php-fann-master.zip
+$ cd php-fann-master
 $ phpize
 $ ./configure
 $ make all

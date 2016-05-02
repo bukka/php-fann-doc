@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 331220 $ -->
+<!-- $Revision: 338504 $ -->
 
 <refentry xml:id="function.fann-create-train-from-callback" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  <refnamediv>
@@ -14,7 +14,7 @@
    <methodparam><type>int</type><parameter>num_data</parameter></methodparam>
    <methodparam><type>int</type><parameter>num_input</parameter></methodparam>
    <methodparam><type>int</type><parameter>num_output</parameter></methodparam>
-   <methodparam><type>collable</type><parameter>user_function</parameter></methodparam>
+   <methodparam><type>callable</type><parameter>user_function</parameter></methodparam>
   </methodsynopsis>
   <para>
    Creates the training data struct from a user supplied function. As the training data are numerable (data 1, data 2...),
@@ -57,7 +57,7 @@
       <simplelist>
        <member><literal>num</literal> - The number of the training data set</member>
        <member><literal>num_input</literal> - The number of inputs per training data</member>
-       <member><literal>num</literal> - The number of ouputs per training dataThe number of inputs per training data</member>
+       <member><literal>num_output</literal> - The number of ouputs per training data</member>
       </simplelist>
      </para>
      <para>
@@ -83,10 +83,10 @@
 <![CDATA[
 <?php
 function create_train_callback($num_data, $num_input, $num_output) {
-	return array(
-		"input" => array_fill(0, $num_input, 1),
-		"output" => array_fill(0, $num_output, 1),
-	);
+    return array(
+        "input" => array_fill(0, $num_input, 1),
+        "output" => array_fill(0, $num_output, 1),
+    );
 }
 
 $num_data = 3;
