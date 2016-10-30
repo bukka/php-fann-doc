@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- $Revision: 331305 $ -->
+<!-- $Revision: 339879 $ -->
 
 <chapter xml:id="fann.setup" xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink">
  &reftitle.setup;
@@ -36,7 +36,7 @@
    <para>
     Before you start installation make sure that <emphasis>libfann</emphasis> is installed
     on your system. It's part of the main repository in the most Linux distributions
-    (search for `fann`). You need a development version.
+    (search for <emphasis>fann</emphasis>). You need a development version.
    </para>
    <para>
     If it is not installed, you need to install it first. Either download it from the
